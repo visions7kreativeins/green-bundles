@@ -21,6 +21,14 @@ export const networks = [
 			{ size: '30GB', price: 130 },
 			{ size: '40GB', price: 170 },
 			{ size: '50GB', price: 200 }
+		],
+		instructions: [
+			'Dial *170#',
+			'Select 1 (Transfer Money)',
+			'Select 1 (MoMo User)',
+			'Enter the number: 0534644088',
+			'Enter the amount',
+			'Confirm the name and enter your PIN'
 		]
 	},
 	{
@@ -42,6 +50,14 @@ export const networks = [
 			{ size: '20GB', price: 86 },
 			{ size: '25GB', price: 110 },
 			{ size: '30GB', price: 130 }
+		],
+		instructions: [
+			'Dial *110#',
+			'Select 1 (Send Money)',
+			'Select 2 (Other Networks)',
+			'Select MTN',
+			'Enter the number: 0534644088',
+			'Enter the amount and confirm with your PIN'
 		]
 	},
 	{
@@ -59,6 +75,14 @@ export const networks = [
 			{ size: '30GB', price: 112 },
 			{ size: '40GB', price: 150 },
 			{ size: '50GB', price: 190 }
+		],
+		instructions: [
+			'Dial *110#',
+			'Select 1 (Send Money)',
+			'Select 2 (Other Networks)',
+			'Select 1 (MTN)',
+			'Enter the number: 0534644088',
+			'Enter the amount and confirm with your PIN'
 		]
 	}
 ];

@@ -30,7 +30,7 @@
 
 <svelte:head>
 	<title>Green Bundles | Ghana's Fast Data Plug</title>
-	<meta name="description" content="Get affordable high-speed data for MTN, Telecel, and AirtelTigo. Fast and reliable." />
+	<meta name="description" content="Get affordable high-speed non-expiry data bundles for MTN, Telecel, and AirtelTigo in Ghana. Fast delivery and reliable service." />
 </svelte:head>
 
 <!-- Premium Loader -->
@@ -155,17 +155,47 @@
 	</div>
 </section>
 
-<!-- Call to action -->
-<section class="py-48 text-center px-6">
-    <div class="mx-auto max-w-3xl">
-        <h2 class="text-5xl font-black tracking-tighter md:text-7xl">Ready to <br><span class="text-[var(--apple-blue)]">get connected?</span></h2>
-        <p class="mt-8 text-xl font-medium opacity-50">Join thousands of GH users who save on data daily.</p>
-        <div class="mt-14 flex flex-col items-center gap-6">
-            <a href="https://wa.me/233534644088" class="apple-button h-16 flex items-center justify-center px-12 text-xl shadow-xl shadow-[var(--apple-blue)]/20">Talk on WhatsApp</a>
-			<p class="text-xs font-bold uppercase tracking-widest opacity-20">Support available 24/7</p>
-        </div>
-    </div>
-</section>
+<!-- Footer -->
+<footer class="border-t border-[var(--border-color)] bg-[var(--bg-primary)] py-24 transition-colors duration-300">
+	<div class="mx-auto max-w-5xl px-6">
+		<div class="grid grid-cols-1 gap-12 md:grid-cols-4">
+			<div class="col-span-1 md:col-span-2 space-y-6">
+				<div class="flex items-center gap-3">
+					<div class="h-8 w-8 rounded-xl bg-[var(--apple-blue)] flex items-center justify-center text-white font-black text-xs">GB</div>
+					<span class="text-xl font-black tracking-tighter">Green Bundles</span>
+				</div>
+				<p class="max-w-xs text-sm font-medium opacity-40 leading-relaxed">
+					Ghana's premium third-party non-expiry data plug. Fast, reliable, and affordable.
+				</p>
+			</div>
+			
+			<div class="space-y-6">
+				<h4 class="text-xs font-bold uppercase tracking-[0.2em] opacity-30">Platform</h4>
+				<ul class="space-y-4 text-sm font-semibold">
+					<li><a href="#shop" class="hover:text-[var(--apple-blue)] transition-colors">Buy Bundles</a></li>
+					<li><a href="https://wa.me/233534644088" class="hover:text-[var(--apple-blue)] transition-colors">Support</a></li>
+				</ul>
+			</div>
+
+			<div class="space-y-6">
+				<h4 class="text-xs font-bold uppercase tracking-[0.2em] opacity-30">Legal</h4>
+				<ul class="space-y-4 text-sm font-semibold">
+					<li><a href="/terms" class="hover:text-[var(--apple-blue)] transition-colors">Terms of Service</a></li>
+					<li><a href="/privacy" class="hover:text-[var(--apple-blue)] transition-colors">Privacy Policy</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="mt-24 pt-12 border-t border-[var(--border-color)] flex flex-col md:flex-row justify-between items-center gap-6">
+			<p class="text-xs font-medium opacity-30">
+				© 2026 Green Bundles. Not affiliated with MTN, Telecel, or AirtelTigo.
+			</p>
+			<div class="flex gap-8">
+				<span class="text-[10px] font-bold uppercase tracking-widest opacity-20">Made in Ghana 🇬🇭</span>
+			</div>
+		</div>
+	</div>
+</footer>
 
 <OrderModal 
 	isOpen={isModalOpen} 
