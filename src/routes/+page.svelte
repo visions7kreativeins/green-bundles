@@ -77,7 +77,10 @@
 					Shop Bundles
 				</button>
 				<button 
-					onclick={() => handlePackageSelect({ size: 'DEBUG', price: 0, network: networks[0] })}
+					onclick={() => {
+						const el = document.getElementById('shop');
+						el?.scrollIntoView({ behavior: 'smooth' });
+					}}
 					class="rounded-full bg-[var(--bg-secondary)] h-14 flex items-center justify-center px-10 text-lg font-medium hover:bg-[var(--border-color)] transition-all"
 				>
 					Learn More
@@ -154,48 +157,6 @@
 		</div>
 	</div>
 </section>
-
-<!-- Footer -->
-<footer class="border-t border-[var(--border-color)] bg-[var(--bg-primary)] py-24 transition-colors duration-300">
-	<div class="mx-auto max-w-5xl px-6">
-		<div class="grid grid-cols-1 gap-12 md:grid-cols-4">
-			<div class="col-span-1 md:col-span-2 space-y-6">
-				<div class="flex items-center gap-3">
-					<div class="h-8 w-8 rounded-xl bg-[var(--apple-blue)] flex items-center justify-center text-white font-black text-xs">GB</div>
-					<span class="text-xl font-black tracking-tighter">Green Bundles</span>
-				</div>
-				<p class="max-w-xs text-sm font-medium opacity-40 leading-relaxed">
-					Ghana's premium third-party non-expiry data plug. Fast, reliable, and affordable.
-				</p>
-			</div>
-			
-			<div class="space-y-6">
-				<h4 class="text-xs font-bold uppercase tracking-[0.2em] opacity-30">Platform</h4>
-				<ul class="space-y-4 text-sm font-semibold">
-					<li><a href="#shop" class="hover:text-[var(--apple-blue)] transition-colors">Buy Bundles</a></li>
-					<li><a href="https://wa.me/233534644088" class="hover:text-[var(--apple-blue)] transition-colors">Support</a></li>
-				</ul>
-			</div>
-
-			<div class="space-y-6">
-				<h4 class="text-xs font-bold uppercase tracking-[0.2em] opacity-30">Legal</h4>
-				<ul class="space-y-4 text-sm font-semibold">
-					<li><a href="/terms" class="hover:text-[var(--apple-blue)] transition-colors">Terms of Service</a></li>
-					<li><a href="/privacy" class="hover:text-[var(--apple-blue)] transition-colors">Privacy Policy</a></li>
-				</ul>
-			</div>
-		</div>
-
-		<div class="mt-24 pt-12 border-t border-[var(--border-color)] flex flex-col md:flex-row justify-between items-center gap-6">
-			<p class="text-xs font-medium opacity-30">
-				© 2026 Green Bundles. Not affiliated with MTN, Telecel, or AirtelTigo.
-			</p>
-			<div class="flex gap-8">
-				<span class="text-[10px] font-bold uppercase tracking-widest opacity-20">Made in Ghana 🇬🇭</span>
-			</div>
-		</div>
-	</div>
-</footer>
 
 <OrderModal 
 	isOpen={isModalOpen} 

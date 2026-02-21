@@ -14,9 +14,9 @@
 			</div>
 			<div class="flex items-center space-x-4">
 				<div class="hidden md:block">
-					<span class="text-xs font-semibold uppercase tracking-wider opacity-40">Support: 0534644088</span>
+					<span class="text-xs font-semibold uppercase tracking-wider opacity-40">Support: 0544488152</span>
 				</div>
-				<a href="https://wa.me/233534644088" class="apple-button !py-1.5 !px-4 text-xs">Order Now</a>
+				<a href="https://wa.me/233544488152" class="apple-button !py-1.5 !px-4 text-xs">Order Now</a>
 			</div>
 		</div>
 	</nav>
@@ -43,7 +43,7 @@
 				<div class="space-y-4">
 					<h3 class="text-sm font-bold uppercase tracking-widest opacity-30">Contact</h3>
 					<div class="space-y-1 text-sm opacity-60">
-						<p>WhatsApp: <span class="font-medium text-[var(--text-primary)]">0534644088</span></p>
+						<p>WhatsApp: <span class="font-medium text-[var(--text-primary)]">0544488152</span></p>
 						<p>Email: <span class="font-medium text-[var(--text-primary)]">orders@greenbundles.com</span></p>
 					</div>
 				</div>

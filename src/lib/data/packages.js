@@ -34,7 +34,7 @@ export const networks = [
 	{
 		id: 'airteltigo',
 		name: 'AirtelTigo',
-		color: '#FFFFFF',
+		color: '#E01E26',
 		textColor: '#000000',
 		logo: '/logos/airteltigo.png',
 		packages: [

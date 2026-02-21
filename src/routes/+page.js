@@ -1,3 +1,3 @@
-// since there's no dynamic data here, we can prerender
-// it so that it gets served as a static asset in production
+// No server actions needed — ordering is handled via WhatsApp.
+// Page can be fully prerendered as a static asset.
 export const prerender = true;
