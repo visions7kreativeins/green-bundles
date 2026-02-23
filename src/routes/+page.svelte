@@ -47,32 +47,32 @@
 {/if}
 
 <!-- Hero Section -->
-<section class="relative overflow-hidden py-32 md:py-48">
+<section class="relative overflow-hidden py-20 sm:py-32 md:py-48">
 	<div class="mx-auto max-w-5xl px-6">
 		<div class="max-w-2xl">
 			<h1 
 				in:fly={{ y: 20, duration: 800, delay: 200 }}
-				class="text-6xl font-extrabold tracking-tight text-[var(--text-primary)] md:text-8xl"
+				class="text-5xl font-extrabold tracking-tight text-[var(--text-primary)] sm:text-6xl md:text-8xl"
 			>
 				The data you <br>
 				<span class="text-[var(--apple-blue)]">deserve.</span>
 			</h1>
 			<p 
 				in:fly={{ y: 20, duration: 800, delay: 400 }}
-				class="mt-8 text-xl font-medium text-[var(--text-secondary)] md:text-2xl leading-relaxed"
+				class="mt-6 sm:mt-8 text-lg font-medium text-[var(--text-secondary)] sm:text-xl md:text-2xl leading-relaxed"
 			>
 				Green Bundles provides the fastest, most reliable non-expiry data in Ghana. Premium experience, affordable prices.
 			</p>
 			<div 
 				in:fly={{ y: 20, duration: 800, delay: 600 }}
-				class="mt-12 flex flex-wrap gap-5"
+				class="mt-10 sm:mt-12 flex flex-col sm:flex-row gap-4 sm:gap-5"
 			>
 				<button 
 					onclick={() => {
 						const el = document.getElementById('shop');
 						el?.scrollIntoView({ behavior: 'smooth' });
 					}}
-					class="apple-button h-14 flex items-center justify-center px-10 text-lg shadow-lg shadow-[var(--apple-blue)]/20"
+					class="apple-button w-full sm:w-auto h-14 flex items-center justify-center px-10 text-lg shadow-lg shadow-[var(--apple-blue)]/20"
 				>
 					Shop Bundles
 				</button>
@@ -81,7 +81,7 @@
 						const el = document.getElementById('shop');
 						el?.scrollIntoView({ behavior: 'smooth' });
 					}}
-					class="rounded-full bg-[var(--bg-secondary)] h-14 flex items-center justify-center px-10 text-lg font-medium hover:bg-[var(--border-color)] transition-all"
+					class="rounded-full bg-[var(--bg-secondary)] w-full sm:w-auto h-14 flex items-center justify-center px-10 text-lg font-medium hover:bg-[var(--border-color)] transition-all"
 				>
 					Learn More
 				</button>
@@ -95,13 +95,13 @@
 </section>
 
 <!-- Network Selection Header -->
-<section id="shop" class="sticky top-14 z-40 border-b border-[var(--border-color)] bg-[var(--bg-primary)]/80 py-4 backdrop-blur-md transition-colors duration-300">
-	<div class="mx-auto max-w-5xl px-6">
-		<div class="flex items-center justify-center space-x-2 rounded-2xl bg-[var(--bg-secondary)] p-1.5 md:inline-flex">
+<section id="shop" class="sticky top-14 z-40 border-b border-[var(--border-color)] bg-[var(--bg-primary)]/80 py-3 sm:py-4 backdrop-blur-md transition-colors duration-300">
+	<div class="mx-auto max-w-5xl px-4 sm:px-6">
+		<div class="flex items-center space-x-2 rounded-2xl bg-[var(--bg-secondary)] p-1.5 overflow-x-auto hide-scrollbar snap-x snap-mandatory sm:justify-center">
 			{#each networks as network}
 				<button
 					onclick={() => activeNetwork = network.id}
-					class="flex items-center space-x-2 rounded-xl px-6 py-2.5 text-sm font-bold transition-all duration-300 {activeNetwork === network.id ? 'bg-[var(--card-bg)] text-[var(--apple-blue)] shadow-sm' : 'opacity-40 hover:opacity-100'}"
+					class="flex min-w-max items-center space-x-2 rounded-xl px-4 py-2 sm:px-6 sm:py-2.5 text-xs sm:text-sm font-bold snap-start transition-all duration-300 {activeNetwork === network.id ? 'bg-[var(--card-bg)] text-[var(--apple-blue)] shadow-sm' : 'opacity-40 hover:opacity-100'}"
 				>
 					<div class="h-2 w-2 rounded-full" style="background-color: {network.color}"></div>
 					<span>{network.name}</span>
@@ -114,14 +114,14 @@
 <!-- Active Network Section -->
 {#each networks as network (network.id)}
 	{#if activeNetwork === network.id}
-		<section class="py-24" in:fade={{ duration: 400 }}>
+		<section class="py-16 sm:py-24" in:fade={{ duration: 400 }}>
 			<div class="mx-auto max-w-5xl px-6">
-				<div class="mb-12">
-					<h2 class="text-4xl font-black tracking-tight">{network.name}</h2>
-					<p class="mt-2 text-lg font-medium opacity-40">Choose your non-expiry data package</p>
+				<div class="mb-8 sm:mb-12">
+					<h2 class="text-3xl sm:text-4xl font-black tracking-tight">{network.name}</h2>
+					<p class="mt-2 text-base sm:text-lg font-medium opacity-40">Choose your non-expiry data package</p>
 				</div>
 
-				<div class="grid grid-cols-2 gap-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+				<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
 					{#each network.packages as pkg}
 						<PackageCard 
 							{...pkg} 
@@ -136,9 +136,9 @@
 {/each}
 
 <!-- Why Us Section -->
-<section class="bg-[var(--bg-secondary)] py-32 transition-colors duration-300">
+<section class="bg-[var(--bg-secondary)] py-16 md:py-32 transition-colors duration-300">
 	<div class="mx-auto max-w-5xl px-6">
-		<div class="grid grid-cols-1 gap-16 md:grid-cols-3 text-center">
+		<div class="grid grid-cols-1 gap-10 md:gap-16 md:grid-cols-3 text-center">
 			<div class="space-y-6" in:fade={{ delay: 200 }}>
 				<div class="mx-auto flex h-16 w-16 items-center justify-center rounded-[1.5rem] bg-[var(--card-bg)] text-3xl shadow-sm border border-[var(--border-color)]">🚀</div>
 				<h3 class="text-2xl font-bold tracking-tight">Instant Delivery</h3>

@@ -5,18 +5,18 @@
 
 <div class="flex min-h-screen flex-col bg-[var(--bg-primary)] text-[var(--text-primary)] transition-colors duration-300">
 	<nav class="sticky top-0 z-50 border-b border-[var(--border-color)] bg-[var(--bg-primary)]/70 backdrop-blur-md">
-		<div class="mx-auto flex h-14 max-w-5xl items-center justify-between px-6">
-			<a href="/" class="text-xl font-bold tracking-tight hover:opacity-70 transition-opacity">Green Bundles</a>
+		<div class="mx-auto flex h-14 max-w-5xl items-center justify-between px-4 sm:px-6">
+			<a href="/" class="text-lg sm:text-xl font-bold tracking-tight hover:opacity-70 transition-opacity">Green Bundles</a>
 			<div class="hidden space-x-10 text-sm font-medium opacity-60 md:flex">
 				<a href="#mtn" class="hover:opacity-100 transition-opacity">MTN</a>
 				<a href="#airteltigo" class="hover:opacity-100 transition-opacity">AirtelTigo</a>
 				<a href="#telecel" class="hover:opacity-100 transition-opacity">Telecel</a>
 			</div>
-			<div class="flex items-center space-x-4">
+			<div class="flex items-center space-x-2 sm:space-x-4">
 				<div class="hidden md:block">
 					<span class="text-xs font-semibold uppercase tracking-wider opacity-40">Support: 0544488152</span>
 				</div>
-				<a href="https://wa.me/233544488152" class="apple-button !py-1.5 !px-4 text-xs">Order Now</a>
+				<a href="https://wa.me/233544488152" class="apple-button !px-3 !py-1.5 text-[10px] sm:!px-4 sm:text-xs">Order Now</a>
 			</div>
 		</div>
 	</nav>
@@ -25,9 +25,9 @@
 		{@render children()}
 	</main>
 
-	<footer class="border-t border-[var(--border-color)] bg-[var(--bg-secondary)] py-16">
+	<footer class="border-t border-[var(--border-color)] bg-[var(--bg-secondary)] py-10 md:py-16">
 		<div class="mx-auto max-w-5xl px-6">
-			<div class="grid grid-cols-1 gap-12 md:grid-cols-3">
+			<div class="grid grid-cols-1 gap-8 md:gap-12 md:grid-cols-3">
 				<div class="space-y-4">
 					<h3 class="text-sm font-bold uppercase tracking-widest opacity-30">Green Bundles</h3>
 					<p class="text-sm leading-relaxed opacity-60">Your non-expiry data plug in Ghana. Affordable, fast, and reliable bundle top-ups for all major networks.</p>

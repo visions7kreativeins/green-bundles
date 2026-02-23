@@ -68,7 +68,7 @@
 	>
 		<div
 			transition:scale={{ duration: 400, start: 0.9, opacity: 0 }}
-			class="relative w-full max-w-sm rounded-[2.5rem] bg-[var(--card-bg)] p-10 border border-[var(--border-color)] shadow-2xl max-h-[90vh] overflow-y-auto"
+			class="relative w-full max-w-sm rounded-[2.5rem] bg-[var(--card-bg)] p-6 sm:p-10 border border-[var(--border-color)] shadow-2xl max-h-[90vh] overflow-y-auto hide-scrollbar"
 			onclick={(e) => e.stopPropagation()}
 			onkeydown={(e) => e.stopPropagation()}
 			role="dialog"
@@ -77,7 +77,7 @@
 			tabindex="0"
 		>
 			<button
-				class="absolute right-8 top-8 flex h-8 w-8 items-center justify-center rounded-full bg-[var(--bg-secondary)] text-xl font-light opacity-60 hover:opacity-100 transition-all active:scale-90"
+				class="absolute right-6 top-6 sm:right-8 sm:top-8 flex h-8 w-8 items-center justify-center rounded-full bg-[var(--bg-secondary)] text-xl font-light opacity-60 hover:opacity-100 transition-all active:scale-90"
 				onclick={handleClose}
 				aria-label="Close order modal"
 			>
@@ -86,8 +86,8 @@
 
 			{#if step === 1}
 				<!-- Step 1: Enter recipient number -->
-				<div class="mt-4" in:fly={{ x: 20, duration: 400 }}>
-					<h2 class="text-3xl font-extrabold tracking-tight">{selectedPackage.size}</h2>
+				<div class="mt-4 sm:mt-0" in:fly={{ x: 20, duration: 400 }}>
+					<h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">{selectedPackage.size}</h2>
 					<p class="mt-1 text-sm font-medium opacity-40">Enter the number to receive data</p>
 
 					<form onsubmit={(e) => { e.preventDefault(); handleSubmit(); }} class="mt-10 space-y-8">
@@ -102,7 +102,7 @@
 								maxlength="10"
 								minlength="10"
 								inputmode="numeric"
-								class="mt-2 w-full border-b-2 border-[var(--border-color)] bg-transparent py-4 text-3xl font-bold outline-none transition-colors focus:border-[var(--apple-blue)] text-[var(--text-primary)] {phoneError ? '!border-red-500' : ''}"
+								class="mt-2 w-full border-b-2 border-[var(--border-color)] bg-transparent py-3 sm:py-4 text-2xl sm:text-3xl font-bold outline-none transition-colors focus:border-[var(--apple-blue)] text-[var(--text-primary)] {phoneError ? '!border-red-500' : ''}"
 								oninput={() => { phoneError = ''; phoneNumber = phoneNumber.replace(/\D/g, '').slice(0, 10); }}
 							/>
 							{#if phoneError}
@@ -129,8 +129,8 @@
 
 			{:else}
 				<!-- Step 2: Pay, verify, then message on WhatsApp -->
-				<div class="mt-4" in:fly={{ x: 20, duration: 400 }}>
-					<h2 class="text-2xl font-extrabold tracking-tight">Complete Payment</h2>
+				<div class="mt-4 sm:mt-0" in:fly={{ x: 20, duration: 400 }}>
+					<h2 class="text-xl sm:text-2xl font-extrabold tracking-tight">Complete Payment</h2>
 					<p class="mt-1 text-sm font-medium opacity-40">Follow the steps below to finish your order</p>
 
 					<!-- Recipient + amount summary -->
